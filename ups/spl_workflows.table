@@ -1,0 +1,12 @@
+setupRequired(ctrl_platform_lsstvc)
+setupRequired(ctrl_pool)
+setupRequired(ctrl_mpexec)
+
+envPrepend(PATH, ${PRODUCT_DIR}/bin)
+envPrepend(LD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envPrepend(DYLD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envPrepend(LSST_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
+
+# ctrl_orca      -- indirectly resolved via ctrl_execute -- ctrl_platform_lsstvc
+# ctrl_execute   -- indirectly resolved via ctrl_platform_lsstvc
